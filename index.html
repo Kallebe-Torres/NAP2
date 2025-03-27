@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Validação de Código Postal dos EUA</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Validação de Código Postal dos EUA</h1>
+        <label for="codigo_postal">Código Postal:</label>
+        <input type="text" id="codigo_postal">
+        <button onclick="validarCodigoPostal()">Validar</button>
+        <p id="mensagem" class="mensagem"></p>
+    </div>
+
+    <script>
+        function validarCodigoPostal() {
+            const codigoPostal = document.getElementById('codigo_postal').value;
+            const padrao = /^\d{5}(-\d{4})?$/;
+            const mensagemElement = document.getElementById('mensagem');
+
+            if (padrao.test(codigoPostal)) {
+                mensagemElement.textContent = "Código postal válido!";
+                mensagemElement.className = "mensagem valido";
+            } else {
+                mensagemElement.textContent = "Código postal inválido. Use xxxxx ou xxxxx-xxxx.";
+                mensagemElement.className = "mensagem invalido";
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+body {
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #2C3C45; /* Cor de fundo desejada */
+}
+
+.container {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombreado no contêiner */
+    text-align: center;
+}
+
+label, input, button, .mensagem {
+    display: block;
+    width: 80%;
+    max-width: 300px;
+    margin: 10px auto;
+    padding: 10px;
+}
+
+input {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 8px; /* Bordas arredondadas */
+    padding: 15px 20px; /* Aumenta o padding para um botão maior */
+    font-size: 16px; /* Aumenta o tamanho da fonte */
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Transição suave na cor de fundo */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Sombreado no botão */
+}
+
+button:hover {
+    background-color: #0056b3; /* Cor de fundo mais escura no hover */
+}
+
+.mensagem {
+    font-weight: bold;
+}
+
+.valido {
+    color: green;
+}
+
+.invalido {
+    color: red;
+}
